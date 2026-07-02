@@ -6,12 +6,12 @@ folder, processes any unprocessed .txt files, logs what it did, and exits.
 Cron handles the repetition — this script does not loop internally.
 
 Usage (manual test):
-    python3 folder_agent_loop.py /Users/avenuecreek/tmp/playground/agent101
+    python3 folder_agent_loop.py ~/tmp/playground/agent101
 
 Crontab (every 5 minutes):
-    */5 * * * * cd /Users/avenuecreek/source/my-agents && \
-        /Users/avenuecreek/source/my-agents/venv/bin/python3 folder_agent_loop.py \
-        /Users/avenuecreek/tmp/playground/agent101 >> /Users/avenuecreek/source/my-agents/agent.log 2>&1
+    */5 * * * * cd ~/source/my-agents && \
+        ~/source/my-agents/venv/bin/python3 folder_agent_loop.py \
+        ~/tmp/playground/agent101 >> ~/source/my-agents/agent.log 2>&1
 """
 
 import asyncio
