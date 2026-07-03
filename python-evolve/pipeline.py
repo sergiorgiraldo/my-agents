@@ -30,17 +30,21 @@ def main() -> None:
         print(f"Not a directory: {folder}", file=sys.stderr)
         sys.exit(1)
 
-    for script, label in AGENTS:
-        print(f"\n=== {label} ===")
-        result = subprocess.run(
-            [sys.executable, os.path.join(SCRIPT_DIR, script), folder],
-            check=False,
-        )
-        if result.returncode != 0:
-            print(f"Pipeline stopped: {script} exited {result.returncode}", file=sys.stderr)
-            sys.exit(result.returncode)
+    try:
+        while True:
+            for script, label in AGENTS:
+                print(f"\n=== {label} ===")
+                result = subprocess.run(
+                    [sys.executable, os.path.join(SCRIPT_DIR, script), folder],
+                    check=False,
+                )
+                if result.returncode != 0:
+                    print(f"Pipeline stopped: {script} exited {result.returncode}", file=sys.stderr)
+                    sys.exit(result.returncode)
 
-    print("\nPipeline complete.")
+            print("\nPipeline cycle complete. Restarting...")
+    except KeyboardInterrupt:
+        print("\nPipeline stopped by user.")
 
 
 if __name__ == "__main__":
