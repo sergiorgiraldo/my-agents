@@ -65,6 +65,8 @@ Steps:
 
 6. Print: "Released <new-version>"
 
+in conflict, always bump version
+
 Do not modify any source or test files.
 """
 
