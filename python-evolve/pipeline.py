@@ -12,6 +12,7 @@ Usage:
 import subprocess
 import sys
 import os
+from time import sleep
 
 AGENTS = [
     ("agent1_ruff.py",   "1/3 ruff lint + fix"),
@@ -42,7 +43,8 @@ def main() -> None:
                     print(f"Pipeline stopped: {script} exited {result.returncode}", file=sys.stderr)
                     sys.exit(result.returncode)
 
-            print("\nPipeline cycle complete. Restarting...")
+            print("\nPipeline cycle complete. Restarting in 2 minutes...")
+            sleep(120)
     except KeyboardInterrupt:
         print("\nPipeline stopped by user.")
 
