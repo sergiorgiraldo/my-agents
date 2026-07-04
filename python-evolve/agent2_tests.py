@@ -28,6 +28,10 @@ from claude_agent_sdk import (
     query,
 )
 
+from pipeline_state import get_head, has_new_commit, write_marker
+
+AGENT_NAME = "agent2_tests"
+
 
 async def run_agent(folder: str) -> None:
     prompt = f"""
@@ -75,7 +79,11 @@ def main() -> None:
     if not os.path.isdir(folder):
         print(f"Not a directory: {folder}", file=sys.stderr)
         sys.exit(1)
+    if not has_new_commit(folder, AGENT_NAME):
+        print("agent2: no new commits since last run, skipping.")
+        return
     asyncio.run(run_agent(folder))
+    write_marker(folder, AGENT_NAME, get_head(folder))
 
 
 if __name__ == "__main__":
