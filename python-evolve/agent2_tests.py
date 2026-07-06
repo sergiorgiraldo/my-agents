@@ -28,9 +28,10 @@ from claude_agent_sdk import (
     query,
 )
 
-from pipeline_state import get_head, has_new_commit, write_marker
+from pipeline_state import get_head, has_upstream_progress, write_marker
 
 AGENT_NAME = "agent2_tests"
+UPSTREAM_AGENT = "agent1_ruff"
 
 
 async def run_agent(folder: str) -> None:
@@ -79,8 +80,8 @@ def main() -> None:
     if not os.path.isdir(folder):
         print(f"Not a directory: {folder}", file=sys.stderr)
         sys.exit(1)
-    if not has_new_commit(folder, AGENT_NAME):
-        print("agent2: no new commits since last run, skipping.")
+    if not has_upstream_progress(folder, AGENT_NAME, UPSTREAM_AGENT):
+        print("agent2: no new commit passed by agent1, skipping.")
         return
     asyncio.run(run_agent(folder))
     write_marker(folder, AGENT_NAME, get_head(folder))

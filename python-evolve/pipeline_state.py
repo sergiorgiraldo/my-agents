@@ -50,3 +50,16 @@ def write_marker(folder: str, agent: str, sha: str) -> None:
 def has_new_commit(folder: str, agent: str) -> bool:
     """True if HEAD has moved since this agent last recorded a marker."""
     return read_marker(folder, agent) != get_head(folder)
+
+
+def has_upstream_progress(folder: str, agent: str, upstream_agent: str) -> bool:
+    """True if `upstream_agent` has passed a commit that `agent` has not processed yet.
+
+    Gates a stage on its predecessor's marker instead of raw HEAD, so a stage
+    never acts on a commit its predecessor hasn't finished with — even if HEAD
+    has moved further ahead in the meantime.
+    """
+    upstream_sha = read_marker(folder, upstream_agent)
+    if upstream_sha is None:
+        return False
+    return read_marker(folder, agent) != upstream_sha
