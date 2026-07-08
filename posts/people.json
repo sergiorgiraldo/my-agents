@@ -1,0 +1,26 @@
+{
+  "leaders": [
+    {"name": "Charity Majors", "url": "https://www.linkedin.com/in/charity-majors/", "why": "CTO/co-founder Honeycomb; sharp voice on observability, SRE, reliability, and eng management."},
+    {"name": "Gergely Orosz", "url": "https://www.linkedin.com/in/gergelyorosz", "why": "The Pragmatic Engineer; Amsterdam-based; engineering leadership and industry trends."},
+    {"name": "Camille Fournier", "url": "https://www.linkedin.com/in/camille-fournier-9011812/", "why": "Author of The Manager's Path and Platform Engineering; ex-fintech CTO (Rent the Runway, Two Sigma, JPMorgan)."},
+    {"name": "Chip Huyen", "url": "https://www.linkedin.com/in/chiphuyen", "why": "AI engineering and ML systems design author; LLMOps and production ML."},
+    {"name": "Simon Willison", "url": "https://www.linkedin.com/in/simonwillison/", "why": "Creator of Datasette/LLM tools; practical, level-headed LLM writing."},
+    {"name": "Lorin Hochstein", "url": "https://www.linkedin.com/in/lhochstein/", "why": "Staff reliability engineer at Airbnb; resilience/complex-systems and SRE."},
+    {"name": "Eugene Yan", "url": "https://www.linkedin.com/in/eugeneyan/", "why": "Applied ML/AI at Anthropic; practical ML/LLM systems in production."},
+    {"name": "Hamel Husain", "url": "https://www.linkedin.com/in/hamelhusain/", "why": "Leading voice on LLM evals and debugging AI systems in production."},
+    {"name": "Neil Laughlin", "url": "https://www.linkedin.com/in/neillaughlin/", "why": "VP SRE / EVP Product & Eng at CoreWeave; scaling AI cloud infrastructure."},
+    {"name": "Hagay Lupesko", "url": "https://www.linkedin.com/in/hagaylupesko/", "why": "AI infrastructure leader at Cerebras; large-scale model training/serving."},
+    {"name": "Vicki Boykis", "url": "https://www.linkedin.com/in/vickiboykis", "why": "Founding ML engineer; ML in production, embeddings, MLOps, distributed systems."}
+  ],
+  "peers": [
+    {"name": "Nicolay Gerold", "url": "https://www.linkedin.com/in/nicolay-gerold/", "why": "AI engineer (Amp/Sourcegraph); coding agents, RAG, search, LLMs in production."},
+    {"name": "Kevin Stumpf", "url": "https://www.linkedin.com/in/kevinstumpf/", "why": "Ex-Tecton founder; leads AI Gateway at Databricks; LLM/agent infra."},
+    {"name": "Mir Islam", "url": "https://www.linkedin.com/in/mislam/", "why": "Engineering leader (ex-PayPal); SRE, AI, security; agentic SRE tooling."},
+    {"name": "Eric Anderson", "url": "https://www.linkedin.com/in/ericsanderson1/", "why": "CTO AI & Data at GreenFi; data architecture and AI in a regulated domain."},
+    {"name": "Ari Setiawan", "url": "https://www.linkedin.com/in/arisetiawan-blibli/", "why": "AVP Engineering at Blibli; payments/fintech platforms, agentic AI for eng productivity."},
+    {"name": "Ninus Lazar", "url": "https://www.linkedin.com/in/ninuslazar/", "why": "VP Engineering in fintech/payments/SaaS; scaling engineering orgs."},
+    {"name": "Rahul Gupta", "url": "https://www.linkedin.com/in/rahulguptacto", "why": "CTO building AI/ML for regulated environments; cloud engineering."},
+    {"name": "Ayan Ghosh", "url": "https://www.linkedin.com/in/ayanghosh-001/", "why": "Director of Engineering (AI/ML); ML platform and delivery."},
+    {"name": "Joseph Sindelar", "url": "https://www.linkedin.com/in/ai-mlops", "why": "MLOps and Kubernetes practitioner; production ML infrastructure."}
+  ]
+}
